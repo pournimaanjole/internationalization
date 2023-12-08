@@ -1,5 +1,6 @@
 import translatore from './config.json'
-const translate = ({keyword,lag})=>{
+const i18n = (keyword)=>{
+    const lag =localStorage.getItem("lang") || "en"
 return translatore[lag][keyword]
 }
-export default translate
+export default i18n;
